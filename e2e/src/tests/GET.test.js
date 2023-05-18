@@ -16,3 +16,11 @@ test('Retrieve user post.', async ({ request }) => {
         "userId": 1,
     }));
 });
+
+
+test('Cannot retrieve animals from the API.', async ({ request }) => {
+    const response = await request.get('/animals');
+    expect(response.ok()).toBeFalsy();
+    expect(response.status()).toBe(404);
+    expect(response.statusText()).toEqual('Not Found');
+});
