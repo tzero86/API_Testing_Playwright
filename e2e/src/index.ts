@@ -1,0 +1,13 @@
+const common = `./src/features/**/*.feature \
+                --require-module ts-node/register \
+                --require ./src/step-definitions/**/**/*.ts \
+                -f json:./reports/report.json \
+                --format summary`
+
+const dev = `${common} --tags "@dev"`
+const smoke = `${common} --tags "@smoke"`
+const regression = `${common} --tags "@regression"`
+
+console.log(`\n 👾 👾 👾 API AUTOMATION STARTING 👾 👾 👾 \n`)
+
+export {dev, smoke, regression}

@@ -21,3 +21,17 @@ Then(
     }
 )
 
+
+Then(
+    /^the response status code is (\d*)$/,
+    async function(this: ScenarioWorld, statusCode: string) {
+        const {
+            globalAPIResponseVariables
+        } = this
+
+        console.log(`The response status code is ${statusCode}`)
+
+        const response = globalAPIResponseVariables.response
+        expect(response.status()).toBe(Number(statusCode))
+    }
+)
