@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 21975800
+              "duration": 19714199
             }
           },
           {
@@ -23,11 +23,11 @@
             "line": 5,
             "name": "I retrieve \"posts\"",
             "match": {
-              "location": "src\\step-definitions\\get-steps.ts:13"
+              "location": "src\\step-definitions\\get-steps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 95075299
+              "duration": 90194599
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2041099
+              "duration": 1692899
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 804999
+              "duration": 712999
             }
           }
         ],
