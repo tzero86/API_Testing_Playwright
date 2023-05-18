@@ -7,9 +7,12 @@ Given(
     async function(this: ScenarioWorld, route: string) {
         const {
             api: { request },
+            globalAPIResponseVariables
         } = this
 
+        console.log(`I Retrieve ${route}`)
         const response = await request.get('https://jsonplaceholder.typicode.com/'+route)
-        console.log(await response.text())
+
+        globalAPIResponseVariables.response = response
     }
 )
