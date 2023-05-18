@@ -4,63 +4,71 @@
     "elements": [
       {
         "description": "",
-        "id": "as-an-api-i-can-retrieve-posts;as-an-api-i-can-retrieve-all-posts",
+        "id": "as-an-api-i-can-retrieve-posts;as-an-api-i-cannot-retrieve-animals",
         "keyword": "Scenario",
-        "line": 4,
-        "name": "As an API I can retrieve all posts",
+        "line": 25,
+        "name": "As an API I cannot retrieve animals",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 19714199
+              "duration": 11726299
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
-            "name": "I retrieve \"posts\"",
+            "line": 26,
+            "name": "I retrieve \"animals\"",
             "match": {
               "location": "src\\step-definitions\\get-steps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 90194599
+              "duration": 405697999
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 6,
-            "name": "the response was successful",
+            "line": 27,
+            "name": "the response was unsuccessful",
             "match": {
               "location": "src\\step-definitions\\assertions\\response-steps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 1692899
+              "duration": 1641999
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 7,
-            "name": "the response status code is 200",
+            "line": 28,
+            "name": "the response status code is 404",
             "match": {
               "location": "src\\step-definitions\\assertions\\response-steps.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 712999
+              "duration": 927400
             }
           }
         ],
         "tags": [
           {
             "name": "@dev",
-            "line": 3
+            "line": 22
+          },
+          {
+            "name": "@smoke",
+            "line": 23
+          },
+          {
+            "name": "@regression",
+            "line": 24
           }
         ],
         "type": "scenario"

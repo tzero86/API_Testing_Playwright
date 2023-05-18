@@ -13,5 +13,6 @@ export const getResponse = async(
     const response = await request.get(url.href + route)
 
     globalAPIResponseVariables.response = response
+    console.log(await response.text())
     return response
 }
