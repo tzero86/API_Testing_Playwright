@@ -1,7 +1,7 @@
 Feature: As an API I can delete users
 
 
-    @dev
+
     @smoke
     @regression
     Scenario: As an API I can delete specific posts

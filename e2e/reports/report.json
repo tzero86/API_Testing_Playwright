@@ -4,56 +4,56 @@
     "elements": [
       {
         "description": "",
-        "id": "as-an-api-i-can-delete-users;as-an-api-i-can-delete-specific-posts",
+        "id": "as-an-api-i-can-create-posts;as-an-api-i-can-create-a-new-post",
         "keyword": "Scenario",
-        "line": 7,
-        "name": "As an API I can delete specific posts",
+        "line": 6,
+        "name": "As an API I can create a new post",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 16800999
+              "duration": 17479499
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 8,
-            "name": "I delete the 1st \"posts\"",
+            "line": 7,
+            "name": "I create a new \"posts\" with \"new post\"",
             "match": {
-              "location": "src\\step-definitions\\delete-steps.ts:14"
+              "location": "src\\step-definitions\\post-steps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 423924099
+              "duration": 423682699
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 9,
+            "line": 8,
             "name": "the response was successful",
             "match": {
               "location": "src\\step-definitions\\assertions\\response-steps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 2809000
+              "duration": 3303999
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 10,
-            "name": "the response status code is 200",
+            "line": 9,
+            "name": "the response status code is 201",
             "match": {
               "location": "src\\step-definitions\\assertions\\response-steps.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 1476699
+              "duration": 1605900
             }
           },
           {
@@ -62,46 +62,65 @@
                 "rows": [
                   {
                     "cells": [
-                      "{}"
+                      "id",
+                      "101"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "title",
+                      "This is a new title"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "userId",
+                      "1"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "body",
+                      "This is a new post body"
                     ]
                   }
                 ]
               }
             ],
             "keyword": "And ",
-            "line": 11,
+            "line": 10,
             "name": "the response json contains the attributes:",
             "match": {
               "location": "src\\step-definitions\\assertions\\response-steps.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 2343500
+              "duration": 3555399
             }
           }
         ],
         "tags": [
           {
             "name": "@dev",
-            "line": 4
+            "line": 3
           },
           {
             "name": "@smoke",
-            "line": 5
+            "line": 4
           },
           {
             "name": "@regression",
-            "line": 6
+            "line": 5
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "as-an-api-i-can-delete-users",
+    "id": "as-an-api-i-can-create-posts",
     "line": 1,
     "keyword": "Feature",
-    "name": "As an API I can delete users",
+    "name": "As an API I can create posts",
     "tags": [],
-    "uri": "src\\features\\DELETE.feature"
+    "uri": "src\\features\\POST.feature"
   }
 ]
