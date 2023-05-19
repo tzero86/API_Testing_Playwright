@@ -19,7 +19,7 @@ Feature: As an API I can retrieve posts
             | id     | 1 |
             | userId | 1 |
 
-    @dev
+    
     @smoke
     @regression
     Scenario: As an API I cannot retrieve animals

@@ -17,6 +17,8 @@ const common = `./src/features/**/*.feature \
                 --require ./src/step-definitions/**/**/*.ts \
                 --world-parameters ${JSON.stringify(worldParameters)} \
                 -f json:./reports/report.json \
+                --parallel ${env('PARALLEL')} \
+                --retry ${env('RETRY')} \
                 --format summary`
 
 const dev = `${common} --tags "@dev"`
