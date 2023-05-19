@@ -1,6 +1,7 @@
 import { APIRequestContext, APIResponse } from "playwright";
 import { GlobalConfig, GlobalAPIResponseVariables, JsonPayLoadName } from "../env/global";
 import { retrieveHostURL } from "./host-helper";
+import { payloadExists } from "./payload-helper";
 
 
 export const getResponse = async(
@@ -41,7 +42,7 @@ export const postResponse = async(
     globalAPIResponseVariables: GlobalAPIResponseVariables
 ): Promise<APIResponse> => {
     const url = retrieveHostURL(globalConfig)
-    const payload = globalConfig.jsonPayloadMappings[jsonPayloadName]
+    const payload = payloadExists(globalConfig.jsonPayloadMappings[jsonPayloadName], jsonPayloadName)
 
     const response = await request.post(url.href + route, {data: payload})
 
@@ -59,7 +60,7 @@ export const patchResponse = async(
     globalAPIResponseVariables: GlobalAPIResponseVariables
 ): Promise<APIResponse> => {
     const url = retrieveHostURL(globalConfig)
-    const payload = globalConfig.jsonPayloadMappings[jsonPayloadName]
+    const payload = payloadExists(globalConfig.jsonPayloadMappings[jsonPayloadName], jsonPayloadName)
 
     const response = await request.patch(url.href + route, {data: payload})
 
@@ -77,7 +78,8 @@ export const putResponse = async(
     globalAPIResponseVariables: GlobalAPIResponseVariables
 ): Promise<APIResponse> => {
     const url = retrieveHostURL(globalConfig)
-    const payload = globalConfig.jsonPayloadMappings[jsonPayloadName]
+
+    const payload = payloadExists(globalConfig.jsonPayloadMappings[jsonPayloadName], jsonPayloadName)
 
     const response = await request.put(url.href + route, {data: payload})
 
