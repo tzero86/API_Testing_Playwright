@@ -4,30 +4,30 @@
     "elements": [
       {
         "description": "",
-        "id": "as-an-api-i-can-create-posts;as-an-api-i-can-create-a-new-post",
+        "id": "as-an-api-i-can-update-posts;as-an-api-i-can-update-a-specific-post",
         "keyword": "Scenario",
         "line": 6,
-        "name": "As an API I can create a new post",
+        "name": "As an API I can update a specific post",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 17479499
+              "duration": 17180100
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
-            "name": "I create a new \"posts\" with \"new post\"",
+            "name": "I update the 1st \"posts\" with an \"updated post\"",
             "match": {
-              "location": "src\\step-definitions\\post-steps.ts:14"
+              "location": "src\\step-definitions\\put-steps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 423682699
+              "duration": 699730899
             }
           },
           {
@@ -40,20 +40,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3303999
+              "duration": 2905500
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 9,
-            "name": "the response status code is 201",
+            "name": "the response status code is 200",
             "match": {
               "location": "src\\step-definitions\\assertions\\response-steps.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 1605900
+              "duration": 1549600
             }
           },
           {
@@ -62,14 +62,14 @@
                 "rows": [
                   {
                     "cells": [
-                      "id",
-                      "101"
+                      "title",
+                      "Replacement post"
                     ]
                   },
                   {
                     "cells": [
-                      "title",
-                      "This is a new title"
+                      "body",
+                      "This is a completely updated post"
                     ]
                   },
                   {
@@ -80,8 +80,8 @@
                   },
                   {
                     "cells": [
-                      "body",
-                      "This is a new post body"
+                      "id",
+                      "1"
                     ]
                   }
                 ]
@@ -95,7 +95,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3555399
+              "duration": 4482000
             }
           }
         ],
@@ -116,11 +116,11 @@
         "type": "scenario"
       }
     ],
-    "id": "as-an-api-i-can-create-posts",
+    "id": "as-an-api-i-can-update-posts",
     "line": 1,
     "keyword": "Feature",
-    "name": "As an API I can create posts",
+    "name": "As an API I can update posts",
     "tags": [],
-    "uri": "src\\features\\POST.feature"
+    "uri": "src\\features\\PUT.feature"
   }
 ]
