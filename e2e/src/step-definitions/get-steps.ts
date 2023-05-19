@@ -4,7 +4,7 @@ import { getResponse } from '../support/rest-helper'
 
 
 Given(
-    /^I retrieve "([^"]*)?"$/,
+    /^I retrieve "([^"]*)"$/,
     async function(this: ScenarioWorld, route: string) {
         const {
             api: { request },
@@ -22,7 +22,7 @@ Given(
 
 
 Given(
-    /^I retrieve the ([0-9]+th|[0-9]+st|[0-9]+nd|[0-9]+rd) "([^"]*)?"$/,
+    /^I retrieve the ([0-9]+th|[0-9]+st|[0-9]+nd|[0-9]+rd) "([^"]*)"$/,
     async function(this: ScenarioWorld, index: string, route: string) {
         const {
             api: { request },
